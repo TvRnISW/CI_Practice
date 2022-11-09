@@ -101,6 +101,9 @@ class MainActivity : AppCompatActivity() {
             Log.d(TAG, "consumer: ${channel.receive().toString()}")
             Log.d(TAG, "consumer: ${channel.receive().toString()}")
             Log.d(TAG, "consumer: ${channel.receive().toString()}")
+            Log.d(TAG, "consumer: ${channel.receive().toString()}")
+            Log.d(TAG, "consumer: ${channel.receive().toString()}")
+            Log.d(TAG, "consumer: ${channel.receive().toString()}")
         }
     }
 }
