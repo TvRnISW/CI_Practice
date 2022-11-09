@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.Main).launch {
             getUsers().forEach{ it ->
                 Log.d(TAG, "onCreate: $it")
+                // new comment add
             }
         }
 
