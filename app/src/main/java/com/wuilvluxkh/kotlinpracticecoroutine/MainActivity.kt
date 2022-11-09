@@ -11,6 +11,7 @@ import android.view.Display
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import kotlinx.coroutines.*
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity() {
             getUsers().forEach{ it ->
                 Log.d(TAG, "onCreate: $it")
                 // new comment add
+                Toast.makeText(applicationContext,"Hello world",Toast.LENGTH_LONG).show()
             }
         }
 
