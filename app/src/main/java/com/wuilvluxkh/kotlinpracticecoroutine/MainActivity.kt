@@ -69,6 +69,7 @@ class MainActivity : AppCompatActivity() {
         list.add(getUserId(4))
         list.add(getUserId(5))
         list.add(getUserId(6))
+        list.add(getUserId(7))
 
         return list
     }
