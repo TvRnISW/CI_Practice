@@ -19,7 +19,7 @@ jobs:
 
       - name: Build Project
         run: ./gradlew assemble
-      
+
       - name: Build with gradle
         run: ./gradlew build
         
@@ -28,4 +28,3 @@ jobs:
         with:
           name: app
           path: app/build/outputs/apk/debug/app-debug.apk
-
