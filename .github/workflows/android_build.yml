@@ -21,7 +21,8 @@ jobs:
         run: ./gradlew assemble
 
       - name: Build with gradle
-        uses: ./gradlew build 
+        run: ./gradlew build
+        
       - name: Build APK
         uses: actions/upload-artifact@v3.1.1
         with:
