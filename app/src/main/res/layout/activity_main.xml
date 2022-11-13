@@ -1,38 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentContainerView"
+    android:name="androidx.navigation.fragment.NavHostFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    tools:context=".MainActivity">
-
-    <TextView
-        android:textSize="22sp"
-        android:text="0"
-        android:textColor="@color/black"
-        android:id="@+id/txtCount"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="HardcodedText" />
-
-    <Button
-        android:id="@+id/btnClick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtCount"
-        android:layout_centerInParent="true"
-        android:text="Click" />
-
-    <Button
-        android:onClick="doAction"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnClick"
-        android:layout_centerHorizontal="true"
-        android:text="Execute Task" />
-
-
-</RelativeLayout>
+    app:defaultNavHost="true"
+    app:navGraph="@navigation/nav_graph" />

@@ -4,7 +4,6 @@ on: pull_request
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -13,7 +12,7 @@ jobs:
       - name: Set Up JDK
         uses: actions/setup-java@v1
         with:
-          java-version: 1.8
+          java-version: 11
 
       - name: Run Test
         run: ./gradlew test
@@ -21,3 +20,30 @@ jobs:
       - name: Build Project
         run: ./gradlew assemble
 
+      - name: Build with gradle
+        run: ./gradlew build
+        
+      - name: Build APK
+        uses: actions/upload-artifact@v3.1.1
+        with:
+          name: app
+          path: app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Generate Release APK
+        run: ./gradlew assembleRelease
+
+      - name: Sign APK
+        uses: r0adkll/sign-android-release@v1
+
+        id: sign_app
+        with:
+          releaseDirectory: app/build/outputs/apk/release
+          signingKeyBase64: ${{ secrets.SIGNING_KEY }}
+          alias: ${{ secrets.KEY_ALIAS }}
+          keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
+          keyPassword: ${{ secrets.KEY_PASSWORD }}
+
+      - uses: actions/upload-artifact@master
+        with:
+          name: release.apk
+          path: ${{steps.sign_app.outputs.signedReleaseFile}}
