@@ -22,7 +22,7 @@ jobs:
 
       - name: Build with gradle
         run: ./gradlew build
-
+        
       - name: Build APK
         uses: actions/upload-artifact@v3.1.1
         with:
