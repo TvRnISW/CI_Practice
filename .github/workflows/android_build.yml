@@ -30,12 +30,12 @@ jobs:
           path: app/build/outputs/apk/debug/app-debug.apk
 
       - name: Generate Release APK
-          run: ./gradlew assembleRelease
+        run: ./gradlew assembleRelease
 
       - name: Sign APK
-          uses: r0adkll/sign-android-release@v1
+        uses: r0adkll/sign-android-release@v1
 
-      id: sign_app
+        id: sign_app
         with:
           releaseDirectory: app/build/outputs/apk/release
           signingKeyBase64: ${{ secrets.SIGNING_KEY }}
@@ -43,7 +43,7 @@ jobs:
           keyStorePassword: ${{ secrets.KEY_STORE_PASSWORD }}
           keyPassword: ${{ secrets.KEY_PASSWORD }}
 
-        - uses: actions/upload-artifact@master
-            with:
-              name: release.apk
-              path: ${{steps.sign_app.outputs.signedReleaseFile}}
+      - uses: actions/upload-artifact@master
+        with:
+          name: release.apk
+          path: ${{steps.sign_app.outputs.signedReleaseFile}}
