@@ -15,6 +15,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4b97954-1082-4415-ba46-0730faa47060" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/cikeystore_base64_encoded.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keystore/signing_key.jks.base64.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/android_build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/android_build.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
