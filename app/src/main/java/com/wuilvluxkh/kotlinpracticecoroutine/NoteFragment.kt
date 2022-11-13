@@ -26,4 +26,8 @@ class NoteFragment : Fragment() {
         super.onDestroy()
         _binding = null
     }
+
+    override fun onResume() {
+        super.onResume()
+    }
 }
