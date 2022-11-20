@@ -30,6 +30,7 @@ class LoginFragment : Fragment() {
 
         binding.btnSignUp.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_signUpFragment)
+            // TODO
         }
         return binding.root
     }
