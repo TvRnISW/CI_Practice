@@ -33,8 +33,4 @@ class NoteFragment : Fragment() {
         super.onDestroy()
         _binding = null
     }
-
-    override fun onDetach() {
-        super.onDetach()
-    }
 }
