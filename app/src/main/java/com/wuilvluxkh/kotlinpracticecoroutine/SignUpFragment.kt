@@ -19,10 +19,10 @@ class SignUpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentSignUpBinding.inflate(inflater, container, false)
-        binding.btnClick.setOnClickListener {
+
+        binding.btnLogin.setOnClickListener {
             findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
         }
-
 
         return binding.root
     }
